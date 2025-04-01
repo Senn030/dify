@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import { useTranslation } from 'react-i18next'
 import { Message3Fill } from '@/app/components/base/icons/src/public/other'
 import Button from '@/app/components/base/button'
@@ -22,13 +22,19 @@ const InputsFormNode = ({
     currentConversationId,
     themeBuilder,
     handleStartChat,
-  } = useEmbeddedChatbotContext()
+  } = useEmbeddedChatbotContext();
+
+  // 使用 useEffect 在组件挂载时调用 handleStartChat
+  useEffect(() => {
+    handleStartChat(() => setCollapsed(true));
+  }, [handleStartChat, setCollapsed])
 
   return (
     <div className={cn('mb-6 flex flex-col items-center px-4 pt-6', isMobile && 'mb-4 pt-4')}>
       <div className={cn(
         'w-full max-w-[672px] rounded-2xl border-[0.5px] border-components-panel-border bg-components-panel-bg shadow-md',
         collapsed && 'border border-components-card-border bg-components-card-bg shadow-none',
+        'hidden'
       )}>
         <div className={cn(
           'flex items-center gap-3 rounded-t-2xl px-6 py-4',

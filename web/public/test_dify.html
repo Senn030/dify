@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Embed Chatbot Example</title>
+    <script>
+    difyChatbotConfig = {
+        // 必需参数：聊天机器人的唯一标识符
+        token: "0LqAMZBdkuQEvp04",
+        // 可选参数：自定义基础 URL，默认使用生产环境 URL
+        baseUrl: "http://172.16.18.66",
+        // 可选参数：指定是否使用开发环境 URL，默认为 false
+        isDev: false,
+        // 可选参数：传递给聊天机器人的初始输入参数
+        inputs: {
+            '_yunpan_user_id': '111'
+        },
+        // 可选参数：自定义聊天按钮的容器属性
+        containerProps: {
+            // 自定义类名
+            className: "custom-chat-button",
+            // 自定义样式
+            style: {
+                backgroundColor: "blue",
+                borderRadius: "10px"
+            },
+            // 自定义事件监听器
+            onClick: () => console.log("Button clicked")
+        },
+        // 可选参数：指定聊天按钮是否可以拖动，默认为 false
+        draggable: true,
+        // 可选参数：指定聊天按钮可以拖动的方向，默认为 "both"
+        dragAxis: "both",
+        // 可选参数：指定脚本是否在加载时立即执行 embedChatbot 函数，默认为 false
+        dynamicScript: true
+    };
+    </script>
+    <script
+            src="http://172.16.18.66/embed.min.js"
+            id="Afk1aHHV1Ih1OHS2"
+            defer>
+    </script>
+    <style>
+        #dify-chatbot-bubble-button {
+            background-color: #1C64F2 !important;
+        }
+        #dify-chatbot-bubble-window {
+            width: 24rem !important;
+            height: 40rem !important;
+        }
+    </style>
+</head>
+<body>
+<div class="content">
+    <h1>Welcome to Our Website</h1>
+    <p>Click the chatbot icon to start a conversation.</p>
+</div>
+
+</body>
+</html>
