@@ -26,13 +26,13 @@ const ViewFormDropdown = ({ iconColor }: Props) => {
         crossAxis: 4,
       }}
     >
-      <PortalToFollowElemTrigger
-        onClick={() => setOpen(v => !v)}
-      >
-        <ActionButton size='l' state={open ? ActionButtonState.Hover : ActionButtonState.Default}>
-          <RiChatSettingsLine className={cn('h-[18px] w-[18px]', iconColor)} />
-        </ActionButton>
-      </PortalToFollowElemTrigger>
+      {/*<PortalToFollowElemTrigger*/}
+      {/*  onClick={() => setOpen(v => !v)}*/}
+      {/*>*/}
+      {/*  <ActionButton size='l' state={open ? ActionButtonState.Hover : ActionButtonState.Default}>*/}
+      {/*    <RiChatSettingsLine className={cn('h-[18px] w-[18px]', iconColor)} />*/}
+      {/*  </ActionButton>*/}
+      {/*</PortalToFollowElemTrigger>*/}
       <PortalToFollowElemContent className="z-50">
         <div className='w-[400px] rounded-2xl border-[0.5px] border-components-panel-border bg-components-panel-bg shadow-lg backdrop-blur-sm'>
           <div className='flex items-center gap-3 rounded-t-2xl border-b border-divider-subtle px-6 py-4'>

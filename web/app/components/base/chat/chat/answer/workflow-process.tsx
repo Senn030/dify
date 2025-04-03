@@ -29,7 +29,7 @@ const WorkflowProcessItem = ({
   hideProcessDetail = false,
   readonly = false,
 }: WorkflowProcessProps) => {
-  const { t } = useTranslation()
+  const { t,i18n } = useTranslation()
   const [collapse, setCollapse] = useState(!expand)
   const running = data.status === WorkflowRunningStatus.Running
   const succeeded = data.status === WorkflowRunningStatus.Succeeded
@@ -70,7 +70,13 @@ const WorkflowProcessItem = ({
           )
         }
         <div className={cn('system-xs-medium text-text-secondary', !collapse && 'grow')}>
-          {t('workflow.common.workflowProcess')}
+          {i18n.language === 'zh-Hans'
+            ? (running ? t('workflow.common.workflowEmbedChatThinking')
+              : succeeded ? t('workflow.common.workflowEmbedChatSuccess')
+              : failed ? t('workflow.common.workflowEmbedChatFailed')
+              :  t('workflow.common.workflowProcess'))
+            : t('workflow.common.workflowProcess')
+          }
         </div>
         {!readonly && <RiArrowRightSLine className={cn('ml-1 h-4 w-4 text-text-tertiary', !collapse && 'rotate-90')} />}
       </div>

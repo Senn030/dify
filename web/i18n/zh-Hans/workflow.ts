@@ -48,6 +48,9 @@ const translation = {
     needEndNode: '必须添加结束节点',
     needAnswerNode: '必须添加直接回复节点',
     workflowProcess: '工作流',
+    workflowEmbedChatThinking: '思考中',
+    workflowEmbedChatSuccess: '成功',
+    workflowEmbedChatFailed: '失败',
     notRunning: '尚未运行',
     previewPlaceholder: '在下面的框中输入内容开始调试聊天机器人',
     effectVarConfirm: {

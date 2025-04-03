@@ -7,14 +7,19 @@
     <script>
     difyChatbotConfig = {
         // 必需参数：聊天机器人的唯一标识符
-        token: "0LqAMZBdkuQEvp04",
+        token: "Afk1aHHV1Ih1OHS2",
         // 可选参数：自定义基础 URL，默认使用生产环境 URL
-        baseUrl: "http://172.16.18.66",
+        baseUrl: "http://127.0.0.1:3000",
         // 可选参数：指定是否使用开发环境 URL，默认为 false
         isDev: false,
         // 可选参数：传递给聊天机器人的初始输入参数
         inputs: {
             '_yunpan_user_id': '111'
+        },
+        // 可选参数: 自定义窗口的大小
+        windowSize: {
+            width: "24rem",
+            height: "43.75rem"
         },
         // 可选参数：自定义聊天按钮的容器属性
         containerProps: {
@@ -23,7 +28,9 @@
             // 自定义样式
             style: {
                 backgroundColor: "blue",
-                borderRadius: "10px"
+                borderRadius: "10px",
+                width: "60px",
+                height: "60px",
             },
             // 自定义事件监听器
             onClick: () => console.log("Button clicked")
@@ -37,7 +44,7 @@
     };
     </script>
     <script
-            src="http://172.16.18.66/embed.min.js"
+            src="http://127.0.0.1:3000/embed.min.js"
             id="Afk1aHHV1Ih1OHS2"
             defer>
     </script>

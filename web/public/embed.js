@@ -68,22 +68,26 @@
       iframe.title = "dify chatbot bubble window";
       iframe.id = iframeId;
       iframe.src = iframeUrl;
+
+      // get windowSize config
+      const windowSize = config.windowSize || {} ;
+
       iframe.style.cssText = `
-        position: absolute;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        left: unset;
-        right: 0;
-        bottom: 0;
-        width: 24rem;
-        max-width: calc(100vw - 2rem);
-        height: 43.75rem;
-        max-height: calc(100vh - 6rem);
-        border: none;
-        z-index: 2147483640;
-        overflow: hidden;
-        user-select: none;
+        position: absolute !important ;
+        display: flex !important ;
+        flex-direction: column !important ;
+        justify-content: space-between !important ;
+        left: unset !important;
+        right: 0 !important ;
+        bottom: 0 !important ;
+        width: ${windowSize.width || "24rem" } !important ;
+        max-width: calc(100vw - 2rem) !important;
+        height: ${windowSize.height || "43.75rem" } !important ;
+        max-height: calc(100vh - 6rem) !important;
+        border: none !important ;
+        z-index: 2147483640 !important ;
+        overflow: hidden !important ;
+        user-select: none !important ;
       `;
 
       return iframe;
