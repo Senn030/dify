@@ -8,7 +8,7 @@ export HTTPS_PROXY=http://127.0.0.1:7890
 docker buildx create --name multi-platform-builder --use
 
 # 构建并推送支持 ARM64 和 AMD64 平台的 Docker 镜像到自己的 Docker Hub
-docker buildx build --platform linux/arm64,linux/amd64 -t hubysen/dify-web:1.1.3-ys-20250404 --push .
+docker buildx build --platform linux/arm64,linux/amd64 -t hubysen/dify-web:1.1.3-ys-20251211-1 --push .
 
 # 删除构建器
 docker buildx rm multi-platform-builder
